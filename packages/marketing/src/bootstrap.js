@@ -13,13 +13,6 @@ const mount = (el, { onNavigate, defaultHistory, initialPathname }) => {
     history.listen(onNavigate);
   }
 
-  // if (initialPathname) {
-  //   const { pathname } = history.location;
-  //   if (pathname !== initialPathname) {
-  //     history.push(initialPathname);
-  //   }
-  // }
-
   ReactDOM.render(<App history={history} />, el);
   return {
     onParentNavigate({ pathname: nextPathname }) {
